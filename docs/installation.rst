@@ -23,6 +23,11 @@ programming mode.
 When CodeBug is connected to a computer via USB is should now appear as a
 serial device (``/dev/ttyACM0`` on Linux).
 
+On MacOS the CodeBug does not automatically appear as serial device ``/dev/ttyACM0``.
+To ensure that the CodeBug can be found by your Python program you need to create
+a symbolic link in Terminal using::
+
+    ln -s /dev/tty.usbmodem1421 /dev/ttyACM0
 
 
 Installing with ``pip``
